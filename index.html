@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Admin Page</title>
+  </head>
+  <body>
+    <main>
+      <header class="flex">
+        <form action="" class="deviceInformation flex">
+          <div class="type flex">
+            <label for="type">Type:</label>
+            <select name="deviceType" id="type">
+              <option value="laptop">laptop</option>
+              <option value="computer">computer</option>
+              <option value="surface">surface</option>
+              <option value="macbook">macbook</option>
+            </select>
+          </div>
+          <input type="text" placeholder="Device name" name="model" />
+          <input type="text" placeholder="Device CPU" name="CPU" />
+          <input type="text" placeholder="Graphic card" name="graphicCard" />
+          <input type="number" placeholder="Vram" name="vram" />
+          <input type="number" placeholder="Memory GB" name="memory" />
+          <input type="text" placeholder="Hard GB" name="hard" />
+          <input type="number" placeholder="price $" name="price" />
+          <div class="compani flex">
+            <label for="compani">Compani:</label>
+            <select name="compani" id="compani">
+              <option value="Asus">ASUS</option>
+              <option value="HP">HP</option>
+              <option value="msi">msi</option>
+              <option value="Lenovo">Lenovo</option>
+              <option value="DELL">DELL</option>
+              <option value="Microsoft">Microsoft</option>
+              <option value="GIGABYTE">GIGABYTE</option>
+              <option value="APPLE">APPLE (mac book)</option>
+            </select>
+          </div>
+          <div class="property flex">
+            <label for="propert">Property:</label>
+            <select name="property" id="property">
+              <option value="webcam">webcam</option>
+              <option value="fingerPrint">finger print</option>
+              <option value="numLock">num lock</option>
+              <option value="keyboardLight">keyboard backlighte</option>
+            </select>
+          </div>
+          <input class="add" type="submit" value="Add" />
+        </form>
+        <div class="preview flex">
+          <div class="header">
+            <h1>Preview</h1>
+            <h1 class="typeText"></h1>
+          </div>
+          <span>Device Model: </span>
+          <p class="deviceModelPreview"></p>
+          <span>Device CPU: </span>
+          <p class="cpuPreview"></p>
+          <span>Device graphic Card: </span>
+          <p class="graphicCardPreview"></p>
+          <span>Device Vram: </span>
+          <p class="vramPreview"></p>
+          <span>Device Memory: </span>
+          <p class="memoryPreview"></p>
+          <span>Device Hard: </span>
+          <p class="hardPreview"></p>
+          <span>Device price: $</span>
+          <p class="pricePreview"></p>
+          <span>Device Compani: </span>
+          <p class="companiPreview"></p>
+          <span>Device property: </span>
+          <p class="propertyPreview"></p>
+        </div>
+      </header>
+    </main>
+    <script src="js/app.js"></script>
+  </body>
+</html>

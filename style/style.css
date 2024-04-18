@@ -23,7 +23,7 @@ form {
   gap: 10px;
   padding-top: 50px;
 }
-.type {
+.platform {
   text-align: center;
   gap: 150px;
   font-weight: 500;
@@ -81,31 +81,38 @@ select {
   transition: 2s;
 }
 .preview {
+  overflow-y: scroll;
+  padding: 10px;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(82, 201, 82);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(75, 215, 148);
+}
+.preview div {
   width: 500px;
   height: 600px;
   background-color: aqua;
   border-radius: 80px;
   text-align: center;
-  display: none;
   margin-top: 50px;
 }
 h1 {
   padding-bottom: 60px;
 }
-span {
-  color: orangered;
-  font-weight: 700;
-  font-size: 18px;
-}
-.typeText {
-  color: rgb(21, 154, 21);
-}
-
-p {
+pre {
   color: orange;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 22px;
 }
-.visible {
-  display: inline-block;
+.platformText {
+  color: rgb(21, 154, 21);
 }

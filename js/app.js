@@ -1,19 +1,10 @@
 let deviceForm = document.querySelector(".deviceInformation");
 let device = [];
-let deviceNamePreview = document.getElementsByTagName("p")[0];
-let cpuPreview = document.getElementsByTagName("p")[1];
-let graphicCardPreview = document.getElementsByTagName("p")[2];
-let vramPreview = document.getElementsByTagName("p")[3];
-let memoryPreview = document.getElementsByTagName("p")[4];
-let hardPreview = document.getElementsByTagName("p")[5];
-let pricePreview = document.getElementsByTagName("p")[6];
-let modelPreview = document.getElementsByTagName("p")[7];
-let propertyPreview = document.getElementsByTagName("p")[8];
-let typeText = document.getElementsByClassName("typeText")[0];
 let preview = document.querySelector(".preview");
+let previewNumber = 0;
 deviceForm.addEventListener("submit", (e) => {
   let deviceInformation = {
-    deviceType: e.target.deviceType.value,
+    platform: e.target.platform.value,
     model: e.target.model.value,
     CPU: e.target.CPU.value,
     graphicCard: e.target.graphicCard.value,
@@ -25,19 +16,29 @@ deviceForm.addEventListener("submit", (e) => {
     property: e.target.property.value,
   };
   device.push(deviceInformation);
+  preview.innerHTML = "";
   if (device.length > 0) {
-    preview.classList.add("visible");
-    typeText.innerText = device[device.length - 1].deviceType;
-    deviceNamePreview.innerText = device[device.length - 1].model;
-    cpuPreview.innerText = device[device.length - 1].CPU;
-    graphicCardPreview.innerText = device[device.length - 1].graphicCard;
-    vramPreview.innerText = device[device.length - 1].vram;
-    memoryPreview.innerText = device[device.length - 1].memory;
-    hardPreview.innerText = device[device.length - 1].hard;
-    pricePreview.innerText = device[device.length - 1].price;
-    modelPreview.innerText = device[device.length - 1].compani;
-    propertyPreview.innerText = device[device.length - 1].property;
+    device.forEach((item, index) => {
+      previewNumber++;
+      let previewBox = document.createElement("div");
+      previewBox.innerHTML = `
+      <h1>Preview ${index + 1}</h1>
+      <h1 class = "platformText">${item.platform}</h1>
+        <pre>Device Type:   ${item.deviceType}</pre>
+        <pre>Model:   ${item.model}</pre>
+        <pre>CPU:   ${item.CPU}</pre>
+        <pre>Graphic Card:   ${item.graphicCard}</pre>
+        <pre>VRAM:   ${item.vram}</pre>
+        <pre>Memory:   ${item.memory}</pre>
+        <pre>Hard:   ${item.hard}</pre>
+        <pre>Price:   ${item.price}</pre>
+        <pre>Compani:   ${item.compani}</pre>
+        <pre>Property:   ${item.property}</pre>
+      `;
+      preview.appendChild(previewBox);
+    });
   }
+
   e.target.type.value = "";
   e.target.model.value = "";
   e.target.CPU.value = "";

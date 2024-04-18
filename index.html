@@ -16,9 +16,9 @@
     <main>
       <header class="flex">
         <form action="" class="deviceInformation flex">
-          <div class="type flex">
-            <label for="type">Type:</label>
-            <select name="deviceType" id="type">
+          <div class="platform flex">
+            <label for="type">Platform:</label>
+            <select name="platform" id="type">
               <option value="laptop">laptop</option>
               <option value="computer">computer</option>
               <option value="surface">surface</option>
@@ -56,30 +56,7 @@
           </div>
           <input class="add" type="submit" value="Add" />
         </form>
-        <div class="preview flex">
-          <div class="header">
-            <h1>Preview</h1>
-            <h1 class="typeText"></h1>
-          </div>
-          <span>Device Model: </span>
-          <p class="deviceModelPreview"></p>
-          <span>Device CPU: </span>
-          <p class="cpuPreview"></p>
-          <span>Device graphic Card: </span>
-          <p class="graphicCardPreview"></p>
-          <span>Device Vram: </span>
-          <p class="vramPreview"></p>
-          <span>Device Memory: </span>
-          <p class="memoryPreview"></p>
-          <span>Device Hard: </span>
-          <p class="hardPreview"></p>
-          <span>Device price: $</span>
-          <p class="pricePreview"></p>
-          <span>Device Compani: </span>
-          <p class="companiPreview"></p>
-          <span>Device property: </span>
-          <p class="propertyPreview"></p>
-        </div>
+        <div class="preview"></div>
       </header>
     </main>
     <script src="js/app.js"></script>
